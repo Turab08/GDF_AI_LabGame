@@ -564,12 +564,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1091374200}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb486dfcd99f490409e50872349c5698, type: 3}
+  m_Script: {fileID: 11500000, guid: decee2ab193717e4d923cda03ac81bb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  surface: {fileID: 906311562}
   agent: {fileID: 1091374207}
   player: {fileID: 1861802033}
+  moveDistance: 7
 --- !u!1 &1171210850
 GameObject:
   m_ObjectHideFlags: 0
