@@ -450,7 +450,7 @@ GameObject:
   - component: {fileID: 1091374207}
   - component: {fileID: 1091374208}
   m_Layer: 6
-  m_Name: Player
+  m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -603,6 +603,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 315bbe8a2cc5df44fab628530db85565, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  surface: {fileID: 906311562}
   agent: {fileID: 1091374207}
   endPoint: {fileID: 1861802033}
   endPointPositions:

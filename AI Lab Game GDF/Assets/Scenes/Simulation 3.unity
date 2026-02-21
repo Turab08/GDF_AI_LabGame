@@ -567,6 +567,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb486dfcd99f490409e50872349c5698, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  surface: {fileID: 906311562}
   agent: {fileID: 1091374207}
   player: {fileID: 1861802033}
 --- !u!1 &1171210850
