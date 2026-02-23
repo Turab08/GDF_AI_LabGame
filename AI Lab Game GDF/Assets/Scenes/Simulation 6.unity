@@ -186,6 +186,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d466e26bccd84ee47bbf7125c9c44574, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bullet: {fileID: 426790811010519293, guid: 2d9ea425b7cf18645b69071994464363, type: 3}
+  shootPoint: {fileID: 1288685583}
 --- !u!4 &450124813
 Transform:
   m_ObjectHideFlags: 0
@@ -629,6 +631,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 333365127}
+  - {fileID: 1288685583}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1091374206
@@ -693,6 +696,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: {fileID: 964788722}
+  idleState: {fileID: 964788722}
+  chaseState: {fileID: 1560941915}
+  attackState: {fileID: 450124812}
+  chaseRadius: 8
+  attackRange: 6
+  player: {fileID: 1861802033}
 --- !u!1 &1280110789
 GameObject:
   m_ObjectHideFlags: 0
@@ -798,6 +807,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1280110789}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1288685582
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1288685583}
+  m_Layer: 6
+  m_Name: ShootPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1288685583
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1288685582}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1091374204}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1409643396
 GameObject:
   m_ObjectHideFlags: 0
@@ -1048,6 +1088,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6450436828bf6041bcbf53956973f6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  agent: {fileID: 1091374207}
+  player: {fileID: 1861802033}
   attackState: {fileID: 450124812}
   isInAttackRange: 0
 --- !u!4 &1560941916

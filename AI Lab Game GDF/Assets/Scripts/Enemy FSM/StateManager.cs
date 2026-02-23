@@ -6,8 +6,36 @@ public class StateManager : MonoBehaviour
 {
     public State currentState;
 
+    public IdleState idleState;
+    public ChaseState chaseState;
+    public AttackState attackState;
+
+    [Header("State Transition Ranges")]
+    public float chaseRadius = 5f;
+    public float attackRange = 3f;
+    
+    public Transform player;
+
     void Update()
     {
+        Debug.Log("Current State: " + currentState.GetType().Name);
+        Vector3 distanceToPlayer = player.position - transform.position;
+        if (distanceToPlayer.magnitude <= chaseRadius)
+        {
+            if (distanceToPlayer.magnitude <= attackRange)
+            {
+                currentState = attackState;
+            }
+            else
+            {
+                currentState = chaseState;
+            }
+        }
+        else
+        {
+            currentState = idleState;
+        }
+
         RunStateMachine();
     }
 
